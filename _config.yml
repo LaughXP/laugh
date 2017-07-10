@@ -1,26 +1,47 @@
-# Dependencies
+# Site settings
+title: 高宇
+email: 466743790@qq.com
+description: > # this means to ignore newlines until "baseurl:"
+  高宇的博客
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://laughxp.github.io # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: 高宇
 
-# Gems
-gems: [jekyll-paginate, jekyll-gist]
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
 
-# Permalinks
-permalink:        pretty
+# Social account
+github: LaughXP
 
-# Setup
-title:            Laugh
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://laughxp.github.io
-baseurl:          /laugh
+# avatar and Favicon
+avatar: https://raw.githubusercontent.com/LaughXP/laugh/master/images/github_avatar.jpeg
+favicon: https://raw.githubusercontent.com/LaughXP/laugh/master/images/bitbug_favicon.ico
 
-author:
-  name:           'Yu Gao'
-  url:            http://laughxp.github.io/laugh/
+# disqus config
+disqus:
+  shortname: gaoyu-zh
 
-paginate:         5
+# google analytics config
+ga:
+  id: UA-54767140-1
+  url: yansu.org
 
-# Custom vars
-version:          2.1.0
+# Build settings
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
 
-github:
-  repo:           https://github.com/LaughXP
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-gist
+
