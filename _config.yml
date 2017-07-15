@@ -27,6 +27,8 @@ disqus:
 # Build settings
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: rouge
 mathjax: disabled
 sass:
@@ -39,4 +41,3 @@ gems:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-gist
-
