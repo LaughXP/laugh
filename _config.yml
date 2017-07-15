@@ -24,11 +24,6 @@ favicon: https://raw.githubusercontent.com/LaughXP/laugh/master/images/bitbug_fa
 disqus:
   shortname: gaoyu-zh
 
-# google analytics config
-ga:
-  id: UA-54767140-1
-  url: yansu.org
-
 # Build settings
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
