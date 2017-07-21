@@ -1,7 +1,7 @@
 <aside id="sidebar" class="open">
   <div id="sidebar-left">
     <a id="sidebar-avatar" href="{{ "/" | prepend: site.baseurl }}">
-      <img id="sidebar-avatar-img" alt="{{ site.tittle }}" src="{{ site.avatar | prepend: site.baseurl }}"/>
+      <img id="sidebar-avatar-img" alt="{{ site.tittle }}" src="{{ site.avatar}}"/>
     </a>
 
     <div id="sidebar-social">
@@ -32,13 +32,13 @@
     <nav id="toc">
       {% if site.filter == 'category' %}
         {% for post in site.posts %}
-          <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
+          <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
           </a>
         {% endfor %}
       {% elsif site.filter == 'tag' %}
         {% for post in site.posts %}
-          <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
+          <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
           </a>
         {% endfor %}
