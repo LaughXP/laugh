@@ -1,5 +1,5 @@
 ---
-title: Why Blog
+title: 个人简介
 layout: post
 ---
 
