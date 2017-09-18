@@ -1,5 +1,5 @@
 # Site settings
-title: hold住事件，而不是hold住数据
+title: 凡事可能出错，就一定出错。
 email: 466743790@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   高宇的博客
@@ -35,6 +35,11 @@ kramdown:
 mathjax: disabled
 sass:
   style: compressed
+googleAnaly:
+  config: false
+lean_cloud :
+  app_id   :  aCjXsh9wzaC2HeIykfNb2SAJ-gzGzoHsz
+  app_key  :  P9gae7YFeywc58BAWKSvRKgg
 
 # Jekyll Plugin
 # https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
