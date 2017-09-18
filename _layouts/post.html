@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="post container">
-  <div class="post-meta">
+  <div class="post-meta leancloud_visitors" id="{{ page.url }}" data-flag-title="{{ page.title }}">
     <span class="post-meta-span date">{{ page.date | date:"%Y %B %d" }}</span>
     {% if page.tags.size > 0 %}
     <span class="post-meta-span tag">{{ page.tags | join: ', ' }}</span>
