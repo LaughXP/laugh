@@ -79,6 +79,7 @@ public class Test {
 - 注意事项
   - java7需要增加jvm参数:-noverify
   - 遇到ClassNotFound错误，需要把对应的包名放到注解@PowerMockIgnore内(详见最后的项目代码示例)
+  - 如果遇到OutOfMemoryError,则可以增加jvm参数-XX:PermSize=128m,或者你可以调整这个参数到更大
 
 ### DBunit
 - 简介<br>
