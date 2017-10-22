@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Powermock文档翻译-原因
+title: PowerMock文档翻译-原因
 category: translation
-tags: Powermock
-keywords: test Powermock translation
-description: 作者开发powermock的原因
+tags: PowerMock
+keywords: test PowerMock translation
+description: 作者开发PowerMock的原因
 ---
 > [原文链接](https://github.com/powermock/powermock/wiki/Motivation)
 
@@ -22,12 +22,12 @@ PowerMock是一个Java mock框架，它可以用来测试一些被认为是困�
 
 不使用PowerMock：把你的代码都封装到委托类中，让框架之间的调用都通过委托进行。
 ### 构思
-如果你非常想测试的方法是私有方法。PowerMock允许你模拟private和final方法。
+如果你非常想测试的方法是私有方法。PowerMock允许你模拟`private`和`final`方法。
 
-不使用PowerMock：私有方法不可能被直接模拟。你可以创建一个新类并把private方法移动到该类作为public方法。并且使用依赖注入进行模拟。不过，以上绝对是一个你不想使用的架构。
+不使用PowerMock：私有方法不可能被直接模拟。你可以创建一个新类并把private方法移动到该类作为`public`方法。并且使用依赖注入进行模拟。不过，以上绝对是一个你不想使用的架构。
 ### 性能?
 如果你觉得依赖注入的代价太高，可以使用静态方法调用或者静态工厂。再比如你有大量的对象或者你使用的是Java ME。PowerMock允许你使用静态方法提高性能和进行模拟。
 
 不使用PowerMock：为每个服务创建单例，并且总得确保在测试时创建了唯一的实例。这有时会打破单例的设计模式并且会增加改变实例的可能性。
 
-(译者按：总之，使用PowerMock可以很方便的模拟private、final、static方法和属性)
+(译者按：总之，使用PowerMock可以很方便的模拟`private`、`final`、`static`方法和属性)
