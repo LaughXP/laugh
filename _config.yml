@@ -28,10 +28,7 @@ disqus:
 permalink: :year-:month-:day-:title.html
 markdown: kramdown
 kramdown:
-  input:         GFM
-  auto_ids:      true
-  auto_id_prefix: 'id-'
-  syntax_highlighter: rouge
+  input: GFM
 mathjax: disabled
 sass:
   style: compressed
