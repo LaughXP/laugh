@@ -8,7 +8,7 @@ description: 作者开发PowerMock的原因
 ---
 > [原文链接](https://github.com/powermock/powermock/wiki/Motivation)
 
-# 原因
+## 原因
 PowerMock是一个Java mock框架，它可以用来测试一些被认为是困难或者不可能进行测试的问题。通过使用PowerMock，你可以mock静态方法，去除静态初始化，可以不通过依赖注入直接进行mock等等。PowerMock是在执行测试用例后，通过在运行时修改字节码实现这些功能的。PowerMock还提供一些工具类，使用者通过这些工具可以更容易的获得一个对象的内部状态。
 
 下面举例一些情况，表明使用PowerMock比其他方法更高效:

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 单元测试
+title: 终极单元测试
 category: java
 tags: test
 keywords: Junit,Mockito,PowerMock,DbUnit,H2,Spring
 description: 集合内存数据库的mock单元测试
 ---
-# 单元测试概要
+## 单元测试概要
 - Mock接口( 本地服务接口、RPC接口、http接口 )
 - Mock数据库
 - 调用过程校验
@@ -14,7 +14,7 @@ description: 集合内存数据库的mock单元测试
 
 **所有测试过程全部建立在与spring集成的基础上**
 
-# 工具
+## 工具
 ### Junit
 - 回归测试框架
 
@@ -120,7 +120,7 @@ assertionMode= DatabaseAssertionMode.NON_STRICT_UNORDERED)
   - TestExcutionListener
   在单元测试开始或者结束的时候执行，可以自定义自己的监听
 
-# 集成
+## 集成
 
 ### Mockito+PowerMock+Junit4+Spring集成
 - 不能mock被spring代理的对象，比如加了切面的类(例如事务切面)

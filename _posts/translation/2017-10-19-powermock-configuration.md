@@ -8,7 +8,7 @@ description: PowerMock的配置
 ---
 > [原文链接](https://github.com/powermock/powermock/wiki/PowerMock-Configuration)
 
-# PowerMock 配置
+## PowerMock 配置
 
 ```
 从1.7.0开始，PowerMock开始启用配置功能
@@ -18,6 +18,7 @@ description: PowerMock的配置
 ```java
 org/powermock/extensions/configuration.properties
 ```
+
 ### 全局的@PowerMockIgnore实现方式
 默认情况下是由[MockClassLoader](https://www.javadoc.io/doc/org.powermock/powermock-core/1.7.1)来加载所有类的。这个类加载器加载和修改除了以下两种类之外的所有类：
   - 系统类。这些类被系统的类加载器延迟加载
