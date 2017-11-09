@@ -121,8 +121,7 @@ public class Source{
     //其他代码
     try {
       minus();
-    }finally{
-
+    }catch (Exception e) {
     }
   }
   @Transactional
