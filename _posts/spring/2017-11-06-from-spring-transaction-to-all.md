@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 从Spring事务管理器窥探Spring容器
+title: Spring事务原理之初始化
 category: spring
 tags: Spring transaction IoC AOP
 keywords: Spring transaction IoC AOP
-description: 从Spring事务管理器窥探Spring容器
+description: Spring事务原理之初始化
 ---
 ## 事务管理抽象
 ![Alt text]({{ site.baseurl }}/assets/img/transaction.png)

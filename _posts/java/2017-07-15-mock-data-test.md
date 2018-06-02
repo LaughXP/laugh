@@ -1,22 +1,40 @@
 ---
 layout: post
-title: 终极单元测试
+title: 终极单元测试(-):基础工具介绍
 category: java
 tags: test
 keywords: Junit,Mockito,PowerMock,DbUnit,H2,Spring
-description: 集合内存数据库的mock单元测试
+description: 基础工具介绍
 ---
+## 期望
+- 不依赖外部环境
+- 结果校验
 ## 单元测试概要
-- Mock接口( 本地服务接口、RPC接口、http接口 )
-- Mock数据库
+- Mock接口(本地服务接口、RPC接口、http接口 )
+- Mock数据库(zk/redis/mysql/mongodb)
+- Mock第三方组件(dubbo/codis)
 - 调用过程校验
 - 执行结果校验
 
 **所有测试过程全部建立在与spring集成的基础上**
 
 ## 工具
+主要包含以下几种工具
+
+名称|作用|备注
+---|---|---
+Junit|单元测试框架|
+Spring Test|提供Spring容器对测试进行支持|
+Mockito|mock框架|
+PowerMock|mock框架|功能异常强大。完成终极单元测试的基石
+DBunit|自动化数据库处理|结合[Spring Test DBUnit](https://springtestdbunit.github.io/spring-test-dbunit/)一起使用
+H2|嵌入式数据库|可在内存中模拟mysql等主流数据库。JVM退出后消亡
+curator-test|zk测试server|在本地内存中启动zk server。JVM退出后消亡
+embedded-redis|嵌入式redis|在本地内存中启动redis server。JVM正常退出后消亡
+embedded-mongodb|嵌入式mongodb|
+embedded-xx|嵌入式xx|xx是指其他任何第三方存储,比如kafka。若无则需要用PowerMock进行mock
 ### Junit
-- 回归测试框架
+- 单元测试框架
 
 ### Mockito
 -  简介<br>
@@ -77,9 +95,9 @@ public class Test {
   - PowerMock会根据你的mock要求，去修改写在注解@PrepareForTest里的class文件（当前测试类会自动加入注解中），以满足特殊的mock需求。例如：去除final方法的final标识，在静态方法的最前面加入自己的虚拟实现等。
   - 如果需要mock的是系统类的final方法和静态方法，PowerMock不会直接修改系统类的class文件，而是修改调用系统类的class文件，以满足mock需求。
 - 注意事项
-  - java7需要增加jvm参数:-noverify
+  - jdk7需要增加jvm参数:-noverify
   - 遇到ClassNotFound错误，需要把对应的包名放到注解@PowerMockIgnore内(详见最后的项目代码示例)
-  - 如果遇到OutOfMemoryError,则可以增加jvm参数-XX:PermSize=128m,或者你可以调整这个参数到更大
+  - jdk7如果遇到OutOfMemoryError,则可以增加jvm参数-XX:PermSize=128m,或者你可以调整这个参数到更大
 
 ### DBunit
 - 简介<br>
@@ -141,4 +159,4 @@ assertionMode= DatabaseAssertionMode.NON_STRICT_UNORDERED)
 ```
 
 ### 源代码
-- [__项目代码__](https://github.com/LaughXP/testWithDbunitAndH2)
+- [__项目代码__](https://github.com/LaughXP/ultimatest)
