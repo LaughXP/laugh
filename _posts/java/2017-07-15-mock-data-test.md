@@ -28,8 +28,8 @@ Mockito | mock框架 | mock业务方法
 PowerMock | mock框架 | 功能异常强大。完成终极单元测试的基石
 DBunit | 自动化数据库处理 | 结合[Spring Test DBUnit](https://springtestdbunit.github.io/spring-test-dbunit/)一起使用
 H2 | 嵌入式数据库 | 可在内存中模拟mysql等主流数据库。JVM退出后消亡
-curator-test | zk测试server | 在本地内存中启动zk server。JVM退出后消亡
-embedded-redis | 嵌入式redis | 在本地内存中启动redis server。JVM正常退出后消亡
+curator-test | zk测试server | 在内存中启动zk server。JVM退出后消亡
+embedded-redis | 嵌入式redis | 在内存中启动redis server。JVM正常退出后消亡
 embedded-mongodb | 嵌入式mongodb | [Embedded MongoDB](https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo)
 embedded-xx | 嵌入式xx | xx是指其他任何第三方存储,比如kafka。若无则需要用PowerMock进行mock
 
